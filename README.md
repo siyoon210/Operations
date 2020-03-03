@@ -33,5 +33,33 @@
 ### 리눅스 파일 시스템 구조
 - 리눅스 디렉토리 구조는 다음 링크 참고 https://webdir.tistory.com/101?category=561456
 
+### 파일 경로와 순회
+- pwd : 현재 디렉토리 경로를 출력
+- ls : 파일 목록 나열
+	- ls -l
+	- ls workspace/ (workspace 파일 목록)
+- cd : 디렉토리 변경
+	- cd var
+	- cd /usr/mygame
+	- cd ../../
+
+- ~ 표시는 홈디렉토리를 뜻한다.
+- **man : 명령어의 매뉴얼을 출력**
+	- man ls
+
+### 파일 관리 명령어
+- mkdir : 디렉토리 생성
+- rmdir : 디렉토리 삭제
+- touch : 빈 파일 생성
+	- touch text.txt
+- mv : 파일 이동 / 변경 (파일명 바꾸기)
+	- mv test.txt workspace/ (test.txt 파일을 workspace 디렉토리 아래로 이동)
+- rm : 파일 삭제
+	- rm -r workspace/ (해당 디렉토리와 하위 디렉토리들을 재귀적으로(recursive)하게 모두 삭제)
+	- rm -ri workspace/ (하위 디렉토리들을 하나씩 확인하는 과정으로 상호작용(interaction) 하면서 지운다.)
+- cp : 파일(디렉토리) 복사
+	-cp text.txt test.cpy
+
+
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
