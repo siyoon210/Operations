@@ -58,8 +58,10 @@
 	- rm -r workspace/ (해당 디렉토리와 하위 디렉토리들을 재귀적으로(recursive)하게 모두 삭제)
 	- rm -ri workspace/ (하위 디렉토리들을 하나씩 확인하는 과정으로 상호작용(interaction) 하면서 지운다.)
 - cp : 파일(디렉토리) 복사
-	-cp text.txt test.cpy
+	- cp text.txt test.cpy
 
+### 파일 편집 및 관리
+- nano를 사용한 파일편집 (vi 보다 직관적이고 쉽다.)
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
