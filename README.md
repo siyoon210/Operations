@@ -105,7 +105,7 @@
 	- !96 (history의 96번 명령어를 다시 실행)
 - echo : 화면에 출력
 	- echo "hello"
-- > (redirection) : 이전 명령어의 결과를 파일 혹은 스트림의 입력으로 사용한다.
+- \> (redirection) : 이전 명령어의 결과를 파일 혹은 스트림의 입력으로 사용한다.
 	- echo "Hello" > test (Hello 출력을 test라는 파일에 덮어 쓴다.)
 	- echo "Hello" >> test (이어서 쓴다.)
 
@@ -116,6 +116,25 @@
 
 - ; (sequence) : 여러 명령어들을 한줄에 이어서 쓰고 싶은 경우
 	- touch test1; echo "okay~" >> test1; cat test1  	
+
+### 파일 압축 관리 (tar)
+- tar(Tape ARchive) 묶음, zip 압축
+- 압축하기
+	- tar -cf name.tar a b c (a,b,c 파일을 name.tar로 묶음)
+	- tar -cf name.tar * (현재 디렉토리 파일들 모두 묶음)
+	- tar -zcf name.tar.gz a b c (+ 묶고 압축까지)
+- 압축풀기
+	- tar -xvf name.tar
+	- tar -zxvf name.tar.gz
+
+- -f : 파일 이름을 지정
+- -c : 파일을 tar로 묶음
+- -x : tar 압출을 풂
+- -v : 작업 내용을 자세히 출력
+- -z : gzip으로 압축하거나 해제함
+- -t : 목록 출력
+- -p : 파일 권한을 저장
+- -C : 경로를 지정
 
 
 ### 참고자료
