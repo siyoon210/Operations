@@ -136,6 +136,12 @@
 - -p : 파일 권한을 저장
 - -C : 경로를 지정
 
+### JDK 설치하기
+- wget : 다운로드 
+	- wget http://....
+- tar -zxvf jdk-8u161-linux-x64.tar.gz (압출풀기)
+- (압축푼 디렉토리에서) ./java -version : 버전 확인  
+
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
