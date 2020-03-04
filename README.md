@@ -60,8 +60,13 @@
 - cp : 파일(디렉토리) 복사
 	- cp text.txt test.cpy
 
-### 파일 편집 및 관리
-- nano를 사용한 파일편집 (vi 보다 직관적이고 쉽다.)
+### 파일 찾기와 파일 정보 확인하기
+- find : 파일 검색
+	- find . -name Hello.java (현재 디렉토리에서 Hello.java라는 이름의 파일을 검색)
+	- find . -name *.java (현재 디렉토리에서 .java로 끝나는 이름의 파일을 검색)
+	- find . -size +1 (현재 디렉토리에서 size가 1 이상인 파일 검색, 기본 단위는 512kb)
+	- find . -size +1c (현재 디렉토리에서 size가 1byte 이사인 파일 검색)
+	- find . -name *.java -size +1c (옵션의 조합도 가능)
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
