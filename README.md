@@ -33,6 +33,12 @@
 ### 리눅스 파일 시스템 구조
 - 리눅스 디렉토리 구조는 다음 링크 참고 https://webdir.tistory.com/101?category=561456
 
+### 리눅스 셸 다루기
+- 탭하면 자동완성
+- 위아래 하면 앞서서 사용했던 명령어
+- man, --help 도움말
+- 확장자를 생략하는 경우가 있다.
+
 ### 파일 경로와 순회
 - pwd : 현재 디렉토리 경로를 출력
 - ls : 파일 목록 나열
@@ -92,6 +98,25 @@
 	- file Hello.java
 	- cf) 리눅스에서는 . 뒤에 붙는 확장자를 생략하는 경우가 
 종종있다.   
+
+### 유용한 명령어
+- clear : 화면 지우기
+- history : 입력한 명령어들을 쭉 보여줌
+	- !96 (history의 96번 명령어를 다시 실행)
+- echo : 화면에 출력
+	- echo "hello"
+- > (redirection) : 이전 명령어의 결과를 파일 혹은 스트림의 입력으로 사용한다.
+	- echo "Hello" > test (Hello 출력을 test라는 파일에 덮어 쓴다.)
+	- echo "Hello" >> test (이어서 쓴다.)
+
+- | (piping) : 이전 명령어의 결과를 다음 명령어의 입력으로 사용한다.
+	- cat test | grep He (test 파일의 출력에서 He를 찾는다.)
+	- ls -l | less (목록이 많은 경우 일부만 본다.)
+	- ls | more
+
+- ; (sequence) : 여러 명령어들을 한줄에 이어서 쓰고 싶은 경우
+	- touch test1; echo "okay~" >> test1; cat test1  	
+
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
