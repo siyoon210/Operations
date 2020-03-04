@@ -38,6 +38,8 @@
 - ls : 파일 목록 나열
 	- ls -l
 	- ls workspace/ (workspace 파일 목록)
+	- ls *.java (.java 확장자를 갖는 파일들의 목록)
+
 - cd : 디렉토리 변경
 	- cd var
 	- cd /usr/mygame
@@ -46,6 +48,7 @@
 - ~ 표시는 홈디렉토리를 뜻한다.
 - **man : 명령어의 매뉴얼을 출력**
 	- man ls
+	- ls --help (man말고 --help 옵션으로도 확인가능)
 
 ### 파일 관리 명령어
 - mkdir : 디렉토리 생성
@@ -67,6 +70,28 @@
 	- find . -size +1 (현재 디렉토리에서 size가 1 이상인 파일 검색, 기본 단위는 512kb)
 	- find . -size +1c (현재 디렉토리에서 size가 1byte 이사인 파일 검색)
 	- find . -name *.java -size +1c (옵션의 조합도 가능)
+
+- cat, head, tail : 파일 내용 출력하기
+	- cat Hello.java (모두 출력)
+	- head -n2 Hello.java (맨 앞 2줄만 출력)
+	- tail -n2 Hello.java (맨 뒤 2줄만 출력)
+
+- grep : 파일 내부의 내용 검색하기
+	- grep "class" Hello.java (Hello.java 파일 내부에서 "class"라는 
+단어 검색)
+	- grep -i "Hello" Hello.java (대소문자를 무시(ignore)하고 모두 
+검색하기)
+
+- cmp : 두개의 파일 정보(줄수, 용량) 비교하기 (compare)
+	- cmp Hello.java Hello1.java
+
+- diff : 두개의 파일의 다른 내용 비교해서 보기
+	- diff Hello.java Hello1.java
+
+- file : 파일의 정보 확인하기
+	- file Hello.java
+	- cf) 리눅스에서는 . 뒤에 붙는 확장자를 생략하는 경우가 
+종종있다.   
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
