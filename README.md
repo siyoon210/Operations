@@ -142,6 +142,17 @@
 - tar -zxvf jdk-8u161-linux-x64.tar.gz (압출풀기)
 - (압축푼 디렉토리에서) ./java -version : 버전 확인  
 
+### 링크파일 사용하기
+- ls -l 출력시에 맨 앞이 d 이면 디렉토리, - 이면 파일, l 이면 링크파일이다.
+링크파일은 윈도우의 바로가기와 비슷한 개념이다.
+- 링크파일은 Symbolic Link 와 Hard Link로 나뉜다.
+- 심볼 링크는 바로가기다.
+- 하드 링크는 파일이 복사되어 별칭이 만들어 진다.
+
+- ln -s test1.txt test1.ln (test1.txt에 대한 test1.ln 링크 파일 생성)
+
+- -s 옵션이 없으면 하드 링크로 만들어 진다.
+- 일반적으로 링크는 심볼릭 링크를 사용한다.
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
