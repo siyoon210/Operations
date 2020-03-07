@@ -159,6 +159,15 @@
 - echo $PATH로 명령어를 찾아보는 경로들을 모두 확인해 볼 수 있다.
 - path에 선언되어있는 디렉토리에 링크파일을 만들면 경로 지정 없이 실행할 수 있다.
 
+### 사용자 추가하기
+- useradd : 사용자추가
+	- useradd dragon
+- usermod : 사용자변경 (modify)
+- userdel : 사용자 삭제
+
+- 추가된 사용자 확인하기 cat /etc/passwd (etc는 설정파일들을 담는 디렉토리), 또는 tail -n /etc/passwd
+- sudo passwd dragon : dragon유저의 비밀번호 설정하기
+
 
 ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
