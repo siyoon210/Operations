@@ -168,6 +168,15 @@
 - 추가된 사용자 확인하기 cat /etc/passwd (etc는 설정파일들을 담는 디렉토리), 또는 tail -n /etc/passwd
 - sudo passwd dragon : dragon유저의 비밀번호 설정하기
 
+### 홈 디렉토리 생성과 소유권 변경하기
+- ls -l 하면 나오게 표시되는 정보중에 3번째는 소유자 정보, 4번째는 소유자 그룹 정보를 나타낸다. 아래는 root가 소유자고 root 그룹이 소유자 그룹이다.
+```
+drwxr-xr-x 3 root root 4096 Jul 14 2020 dragon
+```
 
-### 참고자료
+- sudo chown dragon ../dragon (change owner) : dragon에게 ../dragon 디렉토리 소유권한을 준다.
+- sudo chown dragon:dragon ../dragon : dragon과 dragon 그룹에게 소유 권한을 준다.
+
+
+- ### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
