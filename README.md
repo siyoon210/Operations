@@ -177,6 +177,26 @@ drwxr-xr-x 3 root root 4096 Jul 14 2020 dragon
 - sudo chown dragon ../dragon (change owner) : dragon에게 ../dragon 디렉토리 소유권한을 준다.
 - sudo chown dragon:dragon ../dragon : dragon과 dragon 그룹에게 소유 권한을 준다.
 
+### 사용자를 추가하는 스크립트 파일 생성하기
+- ~/bin/adduser 에 아래와 같은 내용을 추가한다.
+```
+useradd testuser
+tail -n2 /etc/passwd
+mkdir /home/testuser
+chown testuser:testuser /home/testuser
+echo "testuser user added"
+``` 
+- 실행시에 파일의 경로를 지정해주지 않으면 $PATH에 있는 실행파일들을 먼저 뒤지기 떄문에 파일 경로를 지정해주자. ($ ./adduser)
 
-- ### 참고자료
+### 파일권한 변경 (chmod, whereis)
+- ls -l 하면 나오는 파일 권한들은 3비트씩 소유자(user), 그룹(group), 기타((other)에 대한 권한을 나타낸다. 
+- 예를들어 -rwxr-xr-x test.txt 인 경우 test.txt의 소유자 권한은 READ, WRITE, EXECUTE권한이 모두 있고, 그룹과 기타는 읽기와 쓰기권한만 있다.
+- 각 비트를 10진수로 변환하여 숫자로 써 나타낼 수 있다.
+- chmod : 파일 권한 변경
+	- chmod 644 test.txt (rw-r--r-- 로 설정된다.)
+	- chmod u+x texst.txt (user에게 실행권한 추가)
+	- chmod a+rwx test.txt (All 모두에게 모든 권한 추가) 	 
+
+
+### 참고자료
 - 리눅스 for 개발자 - 뉴렉처 https://www.youtube.com/watch?v=TZjB94sA3IU&list=PLq8wAnVUcTFU9zLWK-dHWrvTJ0PF8Y0Sf
