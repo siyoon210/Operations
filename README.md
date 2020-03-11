@@ -187,6 +187,11 @@ chown testuser:testuser /home/testuser
 echo "testuser user added"
 ``` 
 - 실행시에 파일의 경로를 지정해주지 않으면 $PATH에 있는 실행파일들을 먼저 뒤지기 떄문에 파일 경로를 지정해주자. ($ ./adduser)
+- 경로를 지정해주고 싶지 않다면 $PATH 경로에 이는 디렉토리로 옮기자.
+- adduser 라는 명령어가 중복된다면 가장 먼저 선언된 adduser명령어가 실행된다.
+	- whereis adduser (adduser 명령어가 있는 경로들)
+	- which adduser (현재 유저권한으로 실행하게 되는 adduser 명령어의 경로)
+	- sudo which adduser (슈퍼 유저 권한으로 실행하개 되는 adduser 명렁어 경로)
 
 ### 파일권한 변경 (chmod, whereis)
 - ls -l 하면 나오는 파일 권한들은 3비트씩 소유자(user), 그룹(group), 기타((other)에 대한 권한을 나타낸다. 
@@ -196,6 +201,11 @@ echo "testuser user added"
 	- chmod 644 test.txt (rw-r--r-- 로 설정된다.)
 	- chmod u+x texst.txt (user에게 실행권한 추가)
 	- chmod a+rwx test.txt (All 모두에게 모든 권한 추가) 	 
+
+### 인자를 이용한 스크립트 파일로 변경하기 ($1)
+- $1, $2, $3 ... 은 첫번째 인자, 두번쨰 인자, 세번쨰 인자를 뜻한다.
+	- adduser a b c (a가 첫번째, b가 두번쨰, c가 세번쨰 인자다.)
+
 
 
 ### 참고자료
