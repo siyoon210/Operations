@@ -20,4 +20,4 @@
    ```
    $ git checkout -t repo-name/branch-name
    ex) git checkout -t origin/feature/create-user
-```
+   ```
