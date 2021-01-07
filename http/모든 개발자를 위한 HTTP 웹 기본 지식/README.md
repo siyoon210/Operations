@@ -47,12 +47,17 @@
 - 이를 해결하기 위해서 DNS를 사용한다. 
 - 도메인 이름을 네트워크 주소로 바꾸거나 그 반대의 변환을 수행할 수 있도록 할 수 있다.
 
-## 섹션2. URI와 웹 브라우저 요청 흐름
+## 섹션2. URI와 웹 브라우저 요청 흐름 (21.1.7)
 ### [URI]
-- URI(U R Identify) = URL(U R Location) + URN(U R Name)
+- URI(Uiform Resource R Identifier
+	- Uniform (리소스 식별하는 통일된 방식), Resource(자원), Identifier(다른 항목과 구분하는데 필요한 정보)
 	- 요청한 자원을 식별학기 위함.
+	- URL(Uiform Resource Location)와 URN(Uiform Resource Name)는 URI의 부분 집합이다.
 	- Location(위치)는 변경될 수 있으나 Name(이름)은 변경되지 않난다.
+- URL = scheme://[userinfo@]host[:port][/path][?query][#fragment]
 
 ### [웹 브라우저 요청 흐름]
-- 브라우저에서 Http메세지를 만들고, 이 메시지를 TCP/IP 규격에 맞게 OS에서 IP와 PORT정보로 감싸 패킷을 만든다.
+- 브라우저(애플리케이션)에서 (Http)메세지를 만들고, 이 메시지를 TCP/IP 규격에 맞게 OS에서 IP와 PORT정보를 더하여 감싸 패킷을 만든다.
+	- (출발지 IP,PORT / 도착지 IP,PORT (Http 메시지))
+- 네트워크 인터페이스 (랜 드라이버, 랜 장비)가 이 패킷에 원하는 정보를 추가하고 인터넷 망을 통해 서버에 전달되도록 한다.
 - 서버에서 응답받은 패킷을 벗겨서 Http메서드를 분석하여 어떤 정보를 요청했는지 파악하고 응답한다.
