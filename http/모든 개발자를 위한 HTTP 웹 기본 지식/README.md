@@ -121,3 +121,33 @@
 	- 멱등은 리소스 한번 조회에 대해서 고려하며 외부 요인도 고려하지 않는다.
 3. 캐시
 	- GET, HEAD, POST, PATCH에 경우 캐시가 가능하지만 실제로는 GET, HEAD만 가능하다.
+	
+## 섹션 5. HTTP 메서드 활용 (21.1.10)
+### [클라이언트에서 서버로 데이터 전송]
+- 정적데이터 요청시(ex 이미지) GET 요청
+- 동적데이터 요청시(ex 필터링, 검색, 페이징) GET요청에 쿼리스트링으로 동적데이터 전송
+- HTML form을 사용한 전송
+	- form의 method를 POST를 사용하는 경우 Content-type: application/x-www-form-urlencoded로 설정되고 body에 form데이터가 key,value로 설정된다.
+	- form의 method를 GET을 사용하는 경우 form 데이터를 쿼리스트링으로 만들어 준다. (form을 적절히 사용하면 쿼리스트링을 만들기 훨씬 쉽겠군!)
+	-  파일을 전송해야 하는 경우 enctype="multipart/form-data"를 명시하며 boundaray=로 데이터들을 구분하여 전송된다.
+	```
+	POST /save HTTP/1.1
+	HOST: localhost:8080
+	Content-Type: multipart/form-data; boundary=---XXX
+	
+	---XXX
+	Content-Disposition: form-data; name="username"
+	
+	kim
+
+	---XXX
+	Content-Disposition: form-data; name="age"
+	
+	20
+	---XXX
+	Content-Disposition: form-data; name="file1"l filename="intro.png"
+	Content-Type: image/png
+	
+	.....
+	```
+- HTTP  API를 통한 전송
