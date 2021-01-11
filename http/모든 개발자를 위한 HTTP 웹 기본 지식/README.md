@@ -175,3 +175,5 @@
 - 문서, 컬렉션, 스토어 (혹은 HTTP 메서드)만으로 해결하기 어려운 경우 URI에 동사를 사용한다.
 - ex) /memebers/100/delete
 - (동사를 사용하는 것에 찝찝함이 있었는데 한계를 모두 인정하고 컨트롤URI와 같은 개념이 있구나..! :) )
+
+- http://restfulapi.net/resource-naming
