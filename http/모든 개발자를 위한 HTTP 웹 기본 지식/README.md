@@ -304,3 +304,7 @@
 	- `Cache-Control: no-cache, no-store, must-revalidate`
 	- `Pragma: no-cache`
 
+## 다음으로
+- HTTP 스펙과 관련된 자료를 볼때는 RFC2616인것을 참고할때는 조심해야한다. RFC7230-7235이 최신스펙이다. 
+	- HTTP 완벽가이드 책는 좋은 책이지만 RFC2616이라는 점 조심
+
