@@ -110,6 +110,17 @@
 ### AppSpec.yml
 - 배포 진행 절차가 적혀있는 명세서
 
+### AWS Secrets Manager
+- 비밀값을 관리 서비스
+- 비밀값들은 암호화되어서 저장되는데 암호화에 사용되는 키는 KMS라는 서비스에 존재한다.
+- 비밀값들을 저장해두고, 서버에서 비밀값을 요청시에 IAM이 해당 사용자가 권한이 있는지 확인하고, KMS에서 키를 받아 복호화 한후 응답으로 보내준다.
+
+### AWS KMS(Key Management Service)
+- Secrets Manger에 저장된 비밀값들을 암호화, 복호화 하기 위한 키를 저장한다.
+
+### AWS CLI(Command Line Interface), AWS SDK(Software Devlopment Kit)
+- AWS 서비스들을 조작할 수 있는 해준다. CLI는 명령줄로, SDK는 프로그래밍 언어로 다룰 수 있다.
+
 ---
 
 ## AWS 이외에 키워드
