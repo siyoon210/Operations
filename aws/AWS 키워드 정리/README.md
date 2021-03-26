@@ -121,6 +121,10 @@
 ### AWS CLI(Command Line Interface), AWS SDK(Software Devlopment Kit)
 - AWS 서비스들을 조작할 수 있는 해준다. CLI는 명령줄로, SDK는 프로그래밍 언어로 다룰 수 있다.
 
+### AWS System Manager의 파라미터 스토어
+- **Secrets Manager 아님 주의!**
+- Secrets Manager와 비슷하지만 무료서비스다. Secrets Manger가 더 나중에 나온 서비스지만 아직까지 큰 메리트가 없는 상태
+
 ---
 
 ## AWS 이외에 키워드
