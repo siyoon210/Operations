@@ -1,5 +1,16 @@
 # Git & Github
 
+## (21.06.03) 여러 커밋 한꺼번에 Revert 하기
+    ```
+    git checkout -b revert-my-commits # develop에서 새로운 브랜치
+    git reset --mixed 56e05fced (돌아가고자 하는 시점)
+    git reset --soft HEAD@{1}
+    git commit -m "Revert My commits"
+    git reset --hard
+    git checkout develop
+    git merge --no-ff revert-my-commits
+    ```
+
 ## (20.07.14) github remote branch 이름변경
 - git local branch 이름변경
     ```
