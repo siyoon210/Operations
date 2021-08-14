@@ -1,5 +1,12 @@
 # Git & Github
 
+## (21.08.14) Personal Access Token 적용하기
+1. Generate a new token from github's dev settings
+2. Update remote URL git remote set-url origin https://<token>@github.com/<git_url>
+3. pull once: git pull https://<token>@<git_url>.git
+    
+- https://stackoverflow.com/questions/68191392/password-authentication-is-temporarily-disabled-as-part-of-a-brownout-please-us
+
 ## (21.06.03) 여러 커밋 한꺼번에 Revert 하기
     ```
     git checkout -b revert-my-commits # develop에서 새로운 브랜치
