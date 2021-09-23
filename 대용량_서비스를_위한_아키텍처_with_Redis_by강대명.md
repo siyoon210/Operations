@@ -27,3 +27,4 @@
 - DNS TTL 이슈
 - 서비스 디스커버리 툴 (Coordinator 라고도 함)
   - Zookeeper, Etcd, Consul, Eureka
+- Feature Flag (Feature Toggle) (= 프론트서버에서 Consul을 활용하여 구현된 사항)
