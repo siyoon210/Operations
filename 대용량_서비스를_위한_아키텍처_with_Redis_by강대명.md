@@ -60,3 +60,10 @@
 - primary (= master)
 - secondary (= slave, replica)
 - (MySQL MHA, MMA failover)
+- Q) 몇대의 Secondary가 좋을까? (A)최소 2대)
+- 새로운 Secondary를 붙여야 할때는 Primary에 부하가 생기는 것을 생각해야겠군..
+- 읽기 분배 (query off)
+  - Q) 읽기 분배를 하는 이유는?
+- Replication Lag
+- Eventual Consistency
+- Replication Lag을 고려하여서 읽기분배를 사용해야할지 말지 결정해야 한다.
