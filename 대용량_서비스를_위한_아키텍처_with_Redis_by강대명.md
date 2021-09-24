@@ -33,3 +33,13 @@
 - Feature Flag (Feature Toggle) (= 프론트서버에서 Consul을 활용하여 구현된 사항)
 
 ## 서킷브레이커 (Circuit Breaker)
+- Fast Fail Back
+- 서킷브레이커 상태
+  - closed
+  - open
+  - half open
+- Q) 왜 서킷브레이커가 꼭 필요한가? 서킷브레이커기 있거나 없거나 실패 API를 내려주는건 똑같을텐데?
+- Side Car 패턴
+- 서킷브레이커 구현체 (java)
+  - Hystrix (Netflix, 더 이상 업데이트 안됨)
+  - Resilience4j
