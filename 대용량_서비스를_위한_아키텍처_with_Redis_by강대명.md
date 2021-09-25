@@ -79,4 +79,13 @@
   - Modular
   - Indexed (단점 hint SPOF)
   - Complexed
-- 
+
+
+## Consistent Hashing
+- Q) Consistent Hashing은 Modular 샤딩방식의 어떤점을 보안하는가? (hint 리밸런싱)
+- Q) Consistent Hashing은 장애에 안정적인가?
+- Q) Consistent Hashing은 부하에 안정적인가?
+- Virtual Node
+- Q) Consistent Hashing에서 어떤값을 서버의 key값으로 해야할까? (IP? DNS? 유니크한 닉네임?)
+- Consistent Hashing 해시코드
+  - ketema hash, murmurhash3, jump hash
