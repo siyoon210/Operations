@@ -62,8 +62,21 @@
 - (MySQL MHA, MMA failover)
 - Q) 몇대의 Secondary가 좋을까? (A)최소 2대)
 - 새로운 Secondary를 붙여야 할때는 Primary에 부하가 생기는 것을 생각해야겠군..
-- 읽기 분배 (query off)
+- 읽기 분배 (읽기분배의 대표적인 방식 -> query off)
   - Q) 읽기 분배를 하는 이유는?
 - Replication Lag
 - Eventual Consistency
 - Replication Lag을 고려하여서 읽기분배를 사용해야할지 말지 결정해야 한다.
+
+## Sharding
+- 읽기 분배외에 부하를 줄일수 있는 방식은 무엇이 있을까? (= 읽기 분배만으로 성능 향상의 한계가 있을때 고려 해봐야 하는것)
+- Data Partitioning 
+- Vertical partitioning
+- Horizontal partitioning (Sharding)
+- Q) 어떻게 데이터를 나눠야 할까?
+  - 특정키를 찾는 방법 (장단점을 생각해보자)
+  - Range
+  - Modular
+  - Indexed (단점 hint SPOF)
+  - Complexed
+- 
