@@ -98,3 +98,12 @@
 - Q) 비동기 큐를 이용한 작업이 필요한 경는 언제인가? (hint: latency)
 - Q) 비동기 큐를 이용하여서 쓰기 작업을 할 경우, 바로 읽어 드릴때 딜레이때문에 생기는 문제를 해결하는 방식은 어떻게 할 것인가!? (hint: cache)
 - sidekiq
+
+## 배포
+- Rolling Update
+  - 한계는? (hint: 롤백시)
+- Blue/Green
+  - 한계는? (hint: On-premis 환경이라면?)
+  - On-Premis에서 Blue-Green을 할려면?
+- Canary Deployment
+  - 카나리 배포시에 고려해야 할 점
