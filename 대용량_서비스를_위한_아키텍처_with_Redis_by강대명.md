@@ -129,3 +129,6 @@
 - Redis Pipeline
   - 작업이 많아질때 Non-pipeline일때보다 10배정도 빠르다.
   - 실제 Redis에서 제공하는 것이 아니라 라이브러리에서 제공하는 방식
+
+### Redis를 어디에 쓸 수 있을까?
+- Cache, Ranking 저장, Job Queue
