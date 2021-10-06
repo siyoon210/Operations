@@ -107,3 +107,25 @@
   - On-Premis에서 Blue-Green을 할려면?
 - Canary Deployment
   - 카나리 배포시에 고려해야 할 점
+
+# Chapter 3. 대규모 트래픽 처리를 위한 Redis
+## Redis 기본 자료구조
+- Redis, Memcached
+- Key Value Store
+- Cluster 모드
+- Strings(K,V)
+  - set/get, mset/mget (multi set, multi get)
+- List(=queue, ex 잡큐)
+  - lpop, rpop, lpush, rpush, blpop
+- Set(ex security token)
+  - sadd, sismember, srem, smembers
+- Sorted Set(ex 랭크보드) (=skiplist)
+  - zadd, zrange, zrevrange, zrangebyscore
+- Hash (일반적인 key value 데이터를 특정군의 데이터로 묶고 싶을떄 유용)
+  - hset, hget, hmset, hmget, hgetall
+
+- 레디스는 싱글쓰레드 형태다.
+  - multi, exec
+- Redis Pipeline
+  - 작업이 많아질때 Non-pipeline일때보다 10배정도 빠르다.
+  - 실제 Redis에서 제공하는 것이 아니라 라이브러리에서 제공하는 방식
