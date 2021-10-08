@@ -132,3 +132,7 @@
 
 ### Redis를 어디에 쓸 수 있을까?
 - Cache, Ranking 저장, Job Queue
+- Q) Cache가 적절한 사례와 아닌 사례는 뭐가 있을까?
+- AWS ElsticCache
+- Redis failover시에 고려해야할것은? (=> DB)
+- 
