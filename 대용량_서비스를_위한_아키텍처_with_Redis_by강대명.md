@@ -135,4 +135,11 @@
 - Q) Cache가 적절한 사례와 아닌 사례는 뭐가 있을까?
 - AWS ElsticCache
 - Redis failover시에 고려해야할것은? (=> DB)
-- 
+
+### Redis Monitoring Metrics
+- mem_fragmentation_ratio : 1보다 적으면 스왑이 발생하여 성능저하가 발생되고 있을 가능성이 높다
+- 자세한건 강의참고
+
+### Redis 장애 처리
+- 레디스는 싱글 쓰레드 형태이기 때문에 하나의 명령이 전체에 성능 저하를 일으킬 수 있다. 
+- Copy on Write : 한대의 레디스 서버의 메모리 사용량을 물리 메모리 절반 이하로 유지하는 것이 좋다. COW 때문!
